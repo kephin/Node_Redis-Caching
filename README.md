@@ -6,12 +6,12 @@ Caching is a very easy way to dramatically improve the **READ** performance of a
 
 | # | Topics |
 |---|--------|
-| 1.|[MongoDB Query Performance](#seeding-mongodb-query-performance)|
+| 1.|[MongoDB Query Performance](#seedling-mongodb-query-performance)|
 | 2.|[Query Caching Layer](#tada-query-caching-layer)|
 | 3.|[Set up Redis and basic operations](#arrow_down-set-up-redis-and-basic-operations)|
 | 4.|[Caching in Action](#zap-caching-in-action)|
 | 5.|[Three Big Issues](#exclamation-three-big-issues)|
-| 6.|[Patch Mongoose's Exec for the first 2 issues](#electric_plug-patch-mongoose's-exec-for-the-first-2-issues)|
+| 6.|[Patch Mongoose's Exec for the first 2 issues](#electric_plug-patch-mongooses-exec-for-the-first-2-issues)|
 | 7.|[Toggleable Cache](#feet-toggleable-cache)|
 | 8.|[Cache Expiration](#shower-cache-expiration)|
 
