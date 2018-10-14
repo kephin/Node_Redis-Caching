@@ -8,6 +8,7 @@ const keys = require('./config/keys');
 require('./models/User');
 require('./models/Blog');
 require('./services/passport');
+require('./services/cache');
 
 mongoose.connect(keys.mongoURI);
 const db = mongoose.connection;
@@ -17,12 +18,10 @@ db.once('open', () => console.log('**** MongoDB Connected ****'));
 const app = express();
 
 app.use(bodyParser.json());
-app.use(
-  cookieSession({
-    maxAge: 30 * 24 * 60 * 60 * 1000,
-    keys: [keys.cookieKey]
-  })
-);
+app.use(cookieSession({
+  maxAge: 30 * 24 * 60 * 60 * 1000,
+  keys: [keys.cookieKey],
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -40,5 +39,5 @@ if (['production'].includes(process.env.NODE_ENV)) {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`Listening on port`, PORT);
+  console.log('Listening on port', PORT);
 });
